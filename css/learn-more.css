@@ -1,0 +1,124 @@
+/* Reset CSS */
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+    padding: 40px;
+    line-height: 1.6;
+}
+
+.nama {
+    display: inline-block;
+    font-size: 2rem;
+    color: #007bff;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* Kontainer utama */
+.About {
+    margin-top: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.About p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #555;
+    text-align: justify;
+}
+
+/* Section Founder */
+.founder h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.a {
+    display: inline-block;
+    text-decoration: none;
+    color: #007bff;
+    margin: 10px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.a h2 {
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+
+.a:hover {
+    color: #0056b3;
+}
+
+/* Tooltip Style */
+.a::after {
+    content: 'Lihat portofolio';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 5px 8px;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+}
+
+.a:hover::after {
+    opacity: 1;
+}
+
+/* Tambahan untuk Responsivitas */
+@media (max-width: 600px) {
+    .nama {
+        font-size: 2em;
+    }
+
+    .About p {
+        font-size: 1em;
+    }
+
+    .founder h1 {
+        font-size: 1.5em;
+    }
+
+    .founder h2 {
+        font-size: 1.2em;
+    }
+}
+
+.logo{
+    width: 20%;
+}
+
+.btn-home {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-home:hover {
+    background-color: #0056b3;
+}

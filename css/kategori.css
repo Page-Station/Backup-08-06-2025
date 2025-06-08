@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@media only screen and (max-width: 600px) {
+}
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    background: #F2EDF3;
+    user-select: none;
+}
+
+/* Icons di Pojok Kanan Atas */
+.top-icons {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.top-icons .mode-toggle,
+.top-icons .profile-icon {
+    font-size: 40px;
+    color: #1B6DB2;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.top-icons .mode-toggle:hover,
+.top-icons .profile-icon:hover {
+    color: #0e4a7a;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100%;
+    background: #FBFBFB;
+    transition: all 0.4s;
+    border-radius: 0 15px 15px 0;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.sidebar img {
+    width: 150px;
+    height: auto;
+    margin-left: 14%;
+    margin-top: 40px;
+}
+
+.sidebar ul {
+    padding: 20px;
+}
+
+.sidebar ul a {
+    margin-left: -25px;
+    display: block;
+    padding: 40px;
+    color: #000000;
+    font-size: 23px;
+    transition: padding-left 0.3s;
+}
+
+.sidebar ul a i {
+    margin-right: 10px;
+}
+
+ul li:hover a {
+    padding-left: 25px;
+}
+
+/* Checkbox & Toggle */
+#check {
+    display: none;
+}
+
+label #btn {
+    position: fixed;
+    left: 20px;
+    top: 25px;
+    font-size: 30px;
+    background: #04233100;
+    color: #1B6DB2;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+label #cancel {
+    position: fixed;
+    left: 190px;
+    top: 20px;
+    font-size: 30px;
+    background: #04233100;
+    color: #1B6DB2;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+label #cancel {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~ .sidebar {
+    left: 0;
+}
+
+#check:checked ~ label #btn {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~ label #cancel {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Main Content */
+.content {
+    padding: 20px;
+    transition: margin-left 0.4s;
+}
+
+#check:checked ~ .content {
+    margin-left: 250px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.search-bar form {
+    display: flex;
+    border: 2px solid #007BFF;
+    border-radius: 30px;
+    overflow: hidden;
+    background: #fff;
+    max-width: 1000px;
+    width: 90%;
+    margin-bottom: 0;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+.search-bar button {
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+/* Search Bar */
+
+
+/* Welcome Banner */
+
+
+/* Logo Buku */
+
+/* White Boxes */
+.white-boxes {
+    display: flex; /* Arrange boxes in a row */
+    margin-top: 20px;
+}
+
+.a{
+    text-decoration: none;
+    color: #1B6DB2;
+}
+
+.kategori {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 82rem; /* Fixed width for the kategori box */
+    height: 37rem; /* Adjust height as needed */
+    margin-left: 3%;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.category-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line if necessary */
+    gap: 20px; /* Space between category boxes */
+    margin-top: 20px; /* Space between the title and the categories */
+}
+
+.category-box {
+    border: 2px solid #1B6DB2;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 150px; /* Fixed width for each category box */
+    text-align: center;
+    flex: 1 1 calc(25% - 20px); /* Ensures each box takes up 25% of the container width minus the gap */
+}
+
+.category-image {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: round the corners of the image */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.right-boxes {
+    display: flex;
+    flex-direction: column; /* Stack box 2 above box 3 */
+    margin-left: 20px; /* Space between kategori and right boxes */
+    flex: 1; /* Take remaining space */
+}
+
+
+
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212; /* Latar belakang gelap */
+    color: #e0e0e0; /* Warna teks terang */
+}
+
+.dark-mode .welcome-banner {
+    background: #1B6DB2;
+}
+
+.dark-mode .kategori, /* Mengubah warna kategori */
+.dark-mode .right-boxes > div { /* Mengubah warna box 2 dan box 3 */
+    background-color: #1e1e1e; /* Latar belakang gelap untuk box */
+    color: #e0e0e0; /* Warna teks terang */
+}
+
+.dark-mode .category-box {
+  background-color: #1e1e1e; /* Latar belakang gelap untuk box */
+  color: #e0e0e0; /* Warna teks terang */
+}
+
+
+.dark-mode .sidebar {
+    background-color: #1e1e1e; /* Latar belakang gelap untuk sidebar */
+    color: #e0e0e0; /* Warna teks terang di sidebar */
+}
+
+.dark-mode .sidebar ul a {
+    color: #e0e0e0; /* Warna teks link di sidebar */
+}
+
+.dark-mode .search-bar {
+    background: #333333; /* Latar belakang gelap untuk search bar */
+    color: #e0e0e0; /* Warna teks terang di search bar */
+}
+
+.dark-mode .search-bar input {
+    background: #44444400; /* Latar belakang input di search bar */
+    color: #e0e0e0; /* Warna teks terang di input */
+}
+
+.dark-mode .welcome-banner button {
+    background: #e0e0e000; /* Warna latar belakang tombol di mode gelap */
+    color: #ffffff; /* Warna teks tombol */
+}
+
+.dark-mode .welcome-banner button:hover {
+    background: #ffffff00; /* Warna latar belakang tombol saat hover */
+}
+
+.book-cover {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 0.2fr));
+    gap: 1px;
+    padding: 20px;
+}
+
+.judul{
+    text-decoration: none;
+    color: #000000;
+}
+
+.book-item {
+    width: 12rem;
+    text-align: center;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #73bbf7;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.book-item:hover {
+    transform: translateY(-2px);
+    box-shadow:  3px 4px #888888;
+}
+.book-cover {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.dark-mode .book-item {
+    background: #333;
+    color: #fff;
+}
+
+.jenjang-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    padding: 20px 0;
+  }
+  
+  .jenjang-box {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .kelas-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .kelas-box {
+    display: inline-block;
+    background-color: #f2f2f2;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.2s;
+  }
+  
+  .kelas-box:hover {
+    background-color: #dcdcdc;
+  }
+  
+  .kelas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.kelas-item {
+    background: white;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.kelas-item:hover {
+    background: #007bff;
+    color: white;
+}
+
+.jenjang-box {
+    margin-bottom: 30px;
+}
+
+  .subkategori-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        .subkategori-box {
+            
+            width: 180px;
+            height: 120px;
+            border: 2px solid #337ab7;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: white;
+            transition: 0.3s;
+            text-decoration: none;
+            color: black;
+        }
+
+        .subkategori-box:hover {
+            background-color: #e6f0ff;
+            transform: scale(1.05);
+        }
+

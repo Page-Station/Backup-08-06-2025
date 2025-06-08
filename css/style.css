@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    background: #F2EDF3;
+    user-select: none;
+}
+
+/* Icons di Pojok Kanan Atas */
+.top-icons {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.top-icons .mode-toggle,
+.top-icons .profile-icon {
+    font-size: 40px;
+    color: #1B6DB2;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.top-icons .mode-toggle:hover,
+.top-icons .profile-icon:hover {
+    color: #0e4a7a;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100%;
+    background: #FBFBFB;
+    transition: all 0.4s;
+    border-radius: 0 15px 15px 0;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.sidebar img {
+    width: 150px;
+    height: auto;
+    margin-left: 14%;
+    margin-top: 40px;
+}
+
+.sidebar ul {
+    padding: 20px;
+}
+
+.sidebar ul a {
+    margin-left: -25px;
+    display: block;
+    padding: 40px;
+    color: #000000;
+    font-size: 23px;
+    transition: all ease 0.3s;
+}
+
+.sidebar ul a i {
+    margin-right: 10px;
+}
+
+li:hover a {
+    color: #1B6DB2;
+}
+
+/* Checkbox & Toggle */
+#check {
+    display: none;
+}
+
+label #btn {
+    position: fixed;
+    left: 20px;
+    top: 25px;
+    font-size: 30px;
+    background: #04233100;
+    color: #1B6DB2;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+label #cancel {
+    position: fixed;
+    left: 190px;
+    top: 20px;
+    font-size: 30px;
+    background: #04233100;
+    color: #1B6DB2;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+label #cancel {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~ .sidebar {
+    left: 0;
+}
+
+#check:checked ~ label #btn {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~ label #cancel {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Main Content */
+.content {
+    padding: 20px;
+    transition: margin-left 0.4s;
+}
+
+#check:checked ~ .content {
+    margin-left: 250px;
+}
+
+/* Search Bar */
+.search-bar {
+    margin-left: 3%;
+    width: 88%;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 100%;
+    border: 1px solid #1B6DB2; /* Add border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Increase padding */
+    font-size: 16px; /* Adjust font size */
+    outline: none;
+}
+
+.search-bar i {
+    color: #888;
+    cursor: pointer;
+}
+
+/* Welcome Banner */
+.welcome-banner {
+    background: #1B6DB2;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,     0, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 97%;
+    height: auto; /* Allow height to adjust */
+    margin-left: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-banner h2 {
+    margin-bottom: 10px;
+}
+
+.welcome-banner p {
+    margin-bottom: 20px;
+}
+
+/* Logo Buku */
+.welcome-banner img.banner-image {
+    width: 120px;
+    height: auto;
+}
+
+/* Tombol Learn More */
+.welcome-banner button {
+    background: #1B6DB2; /* Change background color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    color: #ffffff; /* White text */
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: 600;
+    transition: background 0.3s; /* Smooth transition */
+}
+
+.welcome-banner button:hover {
+    background: #0e4a7a; /* Darker shade on hover */
+}
+
+/* White Boxes */
+.white-boxes {
+    display: flex; /* Arrange boxes in a row */
+    margin-top: 20px;
+}
+
+.a {
+    text-decoration: none;
+    color: #1B6DB2;
+}
+
+.kategori {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%; /* Make kategori box full width */
+    max-width: 1000px; /* Set a max width */
+    height: auto; /* Adjust height as needed */
+    margin-left: 3%;
+    text-align: left;
+}
+
+.category-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line if necessary */
+    justify-content: space-between; /* Space between items */
+}
+
+.category-box {
+    border: 2px solid #1B6DB2;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1 1 calc(30% - 20px); /* Pastikan semua box memiliki lebar yang sama */
+    margin: 10px; /* Tambahkan margin untuk spasi */
+    text-align: center;
+    height: 200px; /* Tetapkan tinggi tetap untuk semua box */
+    display: flex; /* Gunakan flexbox untuk konten di dalam box */
+    flex-direction: column; /* Atur konten secara vertikal */
+    justify-content: center; /* Pusatkan konten secara vertikal */
+}
+
+/* Gambar kategori */
+.category-image {
+    width: 60%; /* Atur lebar gambar agar responsif */
+    height: auto; /* Pertahankan rasio aspek */
+    margin-bottom: 10px; /* Spasi antara gambar dan teks */
+}
+
+.right-boxes {
+    display: flex;
+    flex-direction: column; /* Stack box 2 above box 3 */
+    margin-left: 20px; /* Space between kategori and right boxes */
+    flex: 1; /* Take remaining space */
+}
+
+.golongan {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: 165px; /* Adjust height as needed */
+    text-align: center;
+}
+
+.putih {
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: 165px; /* Adjust height as needed */
+    text-align: center;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212; /* Latar belakang gelap */
+    color: #e0e0e0; /* Warna teks terang */
+}
+
+.dark-mode .welcome-banner {
+    background: #1B6DB2;
+}
+
+.dark-mode .kategori, /* Mengubah warna kategori */
+.dark-mode .right-boxes > div { /* Mengubah warna box 2 dan box 3 */
+    background-color: #1e1e1e; /* Latar belakang gelap untuk box */
+    color: #e0e0e0; /* Warna teks terang */
+}
+
+.dark-mode .category-box {
+    background-color: #1e1e1e; /* Latar belakang gelap untuk box */
+    color: #e0e0e0; /* Warna teks terang */
+}
+
+.dark-mode .sidebar {
+    background-color: #1e1e1e; /* Latar belakang gelap untuk sidebar */
+    color: #e0e0e0; /* Warna teks terang di sidebar */
+}
+
+.dark-mode .sidebar ul a {
+    color: #e0e0e0; /* Warna teks link di sidebar */
+}
+
+.dark-mode .search-bar {
+    background: #333333; /* Latar belakang gelap untuk search bar */
+    color: #e0e0e0; /* Warna teks terang di search bar */
+}
+
+.dark-mode .search-bar input {
+    background: #44444400; /* Latar belakang input di search bar */
+    color: #e0e0e0; /* Warna teks terang di input */
+}
+
+
+.dark-mode .search-bar {
+    background: #333333; /* Latar belakang gelap untuk search bar */
+    color: #e0e0e0; /* Warna teks terang di search bar */
+}
+
+.dark-mode .search-bar input {
+    background: #44444400; /* Latar belakang input di search bar */
+    color: #e0e0e0; /* Warna teks terang di input */
+}
+
+.dark-mode .welcome-banner button {
+    background: #e0e0e000; /* Warna latar belakang tombol di mode gelap */
+    color: #ffffff; /* Warna teks tombol */
+}
+
+.dark-mode .welcome-banner button:hover {
+    background: #ffffff00; /* Warna latar belakang tombol saat hover */
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .top-icons {
+        flex-direction: column; /* Stack icons vertically */
+        align-items: flex-start; /* Align to the start */
+    }
+
+    .sidebar {
+        width: 80%; /* Make sidebar wider on smaller screens */
+    }
+
+    .welcome-banner {
+        height: auto; /* Allow height to adjust */
+        padding: 20px; /* Reduce padding */
+    }
+
+    .search-bar {
+        width: 95%; /* Make search bar wider */
+    }
+
+    .white-boxes {
+        flex-direction: column; /* Stack boxes vertically */
+    }
+
+    .right-boxes {
+        margin-left: 0; /* Remove left margin */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .top-icons {
+        right: 10px; /* Adjust position for smaller screens */
+    }
+
+    .category-box {
+        flex: 1 1 calc(100% - 20px); /* Full width on small screens */
+    }
+
+    .welcome-banner h2 {
+        font-size: 1.5em; /* Adjust font size */
+    }
+
+    .welcome-banner p {
+        font-size: 1em; /* Adjust font size */
+    }
+}
+
+.search-bar form {
+    display: flex;
+    width: 100rem;
+    margin: 0 auto;
+}
+
+.search-bar input[type="text"] {
+    display: flex;
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #1B6DB2;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Styling dropdown suggestion */
+.suggestion-box {
+    margin-top: 8.5rem;
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    width: 76rem;
+    z-index: 1000;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+
+.suggestion-item {
+
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+}
+
+.suggestion-title {
+    font-weight: bold;
+}
+
+.suggestion-author {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.suggestion-description {
+    font-size: 0.85em;
+    color: #666;
+}
+
+
+.suggestion-author-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.suggestion-author-item img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.suggestion-author-item:hover {
+    background-color: #f0f0f0;
+}
+

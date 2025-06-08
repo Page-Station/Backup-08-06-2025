@@ -1,0 +1,19 @@
+body {
+    background: #333333;
+    color: #ffffff;
+  }
+  
+  .sidebar {
+    background: #000000;
+  }
+  
+  .welcome-banner {
+    background: #1B6DB2;
+    color: white;
+  }
+  
+  .search-bar {
+    background: #444444;
+    color: #ffffff;
+  }
+  

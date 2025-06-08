@@ -1,0 +1,130 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 30rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transform: translateY(30px);
+    opacity: 0;
+    animation: slideUp 0.5s ease-out forwards;
+}
+
+/* Animation for container */
+@keyframes slideUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    padding: 20px 0;
+}
+
+form {
+    padding: 20px;
+}
+
+.input-box {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box label {
+    margin-bottom: 8px;
+    font-size: 1em;
+    color: #555;
+}
+
+.input-box input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #555;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.input-box input:focus {
+    border: 1px solid #007bff;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+div p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+div p a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+div p a:hover {
+    text-decoration: underline;
+}
+
+.error {
+    color: red;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+@keyframes fadeSwitch {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+form {
+    animation: fadeSwitch 0.5s ease;
+}
+
+.text{
+    margin-bottom: 2rem;
+}

@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@media only screen and (max-width: 600px) {
+}
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    background: #F2EDF3;
+    user-select: none;
+}
+
+/* Icons di Pojok Kanan Atas */
+.top-icons {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.top-icons .mode-toggle,
+.top-icons .profile-icon {
+    font-size: 40px;
+    color: #1B6DB2;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.top-icons .mode-toggle:hover,
+.top-icons .profile-icon:hover {
+    color: #0e4a7a;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100%;
+    background: #FBFBFB;
+    transition: all 0.4s;
+    border-radius: 0 15px 15px 0;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.sidebar img {
+    width: 150px;
+    height: auto;
+    margin-left: 14%;
+    margin-top: 40px;
+}
+
+.sidebar ul {
+    padding: 20px;
+}
+
+.sidebar ul a {
+    margin-left: -25px;
+    display: block;
+    padding: 40px;
+    color: #000000;
+    font-size: 23px;
+    transition: padding-left 0.3s;
+}
+
+.sidebar ul a i {
+    margin-right: 10px;
+}
+
+ul li:hover a {
+    padding-left: 25px;
+}
+
+/* Checkbox & Toggle */
+#check {
+    display: none;
+}
+
+label #btn {
+    position: fixed;
+    left: 20px;
+    top: 25px;
+    font-size: 30px;
+    background: #04233100;
+    color: #1B6DB2;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+label #cancel {
+    position: fixed;
+    left: 190px;
+    top: 20px;
+    font-size: 30px;
+    background: #04233100;
+    color: #1B6DB2;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+label #cancel {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~ .sidebar {
+    left: 0;
+}
+
+#check:checked ~ label #btn {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~ label #cancel {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Main Content */
+.content {
+    padding: 20px;
+    transition: margin-left 0.4s;
+}
+
+#check:checked ~ .content {
+    margin-left: 250px;
+}
+
+/* Search Bar */
+.search-bar {
+    margin-left: 3%;
+    width: 88%;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.search-bar i {
+    color: #888;
+    cursor: pointer;
+}
+
+/* Welcome Banner */
+
+
+/* Logo Buku */
+
+/* White Boxes */
+.white-boxes {
+    display: flex; /* Arrange boxes in a row */
+    margin-top: 20px;
+}
+
+.a{
+    text-decoration: none;
+    color: #1B6DB2;
+}
+
+.detail-container {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    background: #fff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.detail-cover img {
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.detail-info {
+    flex: 1;
+}
+.detail-info h1 {
+    margin-bottom: 20px;
+}
+.detail-info p {
+    margin-bottom: 10px;
+}
+.back-btn {
+    margin: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007BFF;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+}
